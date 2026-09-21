@@ -1,0 +1,895 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.1.0",
+        "2.0.0",
+        "2.1.0",
+        "2.2.0",
+        "2.3.0"
+      ]
+    },
+    "suiteId": {
+      "type": "string"
+    },
+    "scoreProfile": {
+      "type": "string",
+      "enum": [
+        "legacy",
+        "work",
+        "frontier"
+      ]
+    },
+    "cohort": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "official",
+            "custom-research"
+          ]
+        },
+        "modelSet": {
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "anchorModel": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "members"
+      ],
+      "additionalProperties": false
+    },
+    "pairedComparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "modelId": {
+            "type": "string"
+          },
+          "otherModelId": {
+            "type": "string"
+          },
+          "pairedRuns": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "wins": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "losses": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "ties": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "difference": {
+            "type": "number"
+          },
+          "difference95": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "lower": {
+                    "type": "number"
+                  },
+                  "upper": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "unlockRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "modelId",
+          "otherModelId",
+          "pairedRuns",
+          "wins",
+          "losses",
+          "ties",
+          "difference",
+          "difference95"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "capabilityScores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "modelId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dimension": {
+            "type": "string",
+            "minLength": 1
+          },
+          "runs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "scoredRuns": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "passRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "passRate95": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "lower": {
+                    "type": "number"
+                  },
+                  "upper": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "averageScore": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "totalCostUsd": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "modelId",
+          "dimension",
+          "runs",
+          "scoredRuns",
+          "passRate",
+          "averageScore"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+    },
+    "publishedAt": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    },
+    "benchmarkVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pricingSnapshotAt": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    },
+    "workflowCount": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "workflowDefinitionCount": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "repetitionsPerWorkflow": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "departmentCount": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "modelCount": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "methodologyHref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scoreWeights": {
+      "type": "object",
+      "properties": {
+        "outcome": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reliability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "efficiency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "outcome",
+        "reliability",
+        "efficiency"
+      ],
+      "additionalProperties": false
+    },
+    "departments": {
+      "minItems": 1,
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "marketing",
+              "sales",
+              "revops",
+              "operations",
+              "finance"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "workflowCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "workflowCount"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "failureModes": {
+      "minItems": 6,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "premature-finalization",
+              "required-call-omitted",
+              "required-call-misordered",
+              "retry-abandoned",
+              "required-write-missing",
+              "wrong-human-handoff"
+            ]
+          },
+          "labelLines": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "string",
+                "minLength": 1
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "featured": {
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": [
+          "id",
+          "labelLines",
+          "description",
+          "featured"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "models": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "modelId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "slug": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "org": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provider": {
+            "type": "string",
+            "minLength": 1
+          },
+          "isLocal": {
+            "type": "boolean"
+          },
+          "localSpecs": {
+            "type": "object",
+            "properties": {
+              "parametersB": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "minRamGb": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "quantization": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "runtime": {
+                "type": "string",
+                "const": "Ollama"
+              },
+              "contextLength": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "parametersB",
+              "minRamGb",
+              "quantization",
+              "runtime",
+              "contextLength"
+            ],
+            "additionalProperties": false
+          },
+          "specifications": {
+            "type": "object",
+            "properties": {
+              "totalParameters": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "weightsUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "memoryEstimate": {
+                "type": "object",
+                "properties": {
+                  "minRamGb": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "quantization": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contextLength": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "required": [
+                  "minRamGb",
+                  "quantization",
+                  "contextLength"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "totalParameters",
+              "weightsUrl"
+            ],
+            "additionalProperties": false
+          },
+          "versionLabel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rank": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "corpBenchScore": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "outcomeScore": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "efficiencyScore": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "passRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "passRate95": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "lower": {
+                    "type": "number"
+                  },
+                  "upper": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "clusteredPassRate95": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "lower": {
+                    "type": "number"
+                  },
+                  "upper": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "allVariantsPassRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "costPerSuccessfulWorkflow": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "medianLatencySeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "medianInputTokens": {
+            "type": "number",
+            "minimum": 0
+          },
+          "medianCachedInputTokens": {
+            "type": "number",
+            "minimum": 0
+          },
+          "medianOutputTokens": {
+            "type": "number",
+            "minimum": 0
+          },
+          "totalToolCalls": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "scheduledRuns": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "scoredRuns": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "passedRuns": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "successfulTasks": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "providerFailures": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "providerFailureRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "costPerTask": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "avgDurationSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "departmentScores": {
+            "type": "object",
+            "properties": {
+              "marketing": {
+                "type": "object",
+                "properties": {
+                  "outcome": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "passRate": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "scoredRuns": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "required": [
+                  "outcome",
+                  "passRate",
+                  "scoredRuns"
+                ],
+                "additionalProperties": false
+              },
+              "sales": {
+                "type": "object",
+                "properties": {
+                  "outcome": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "passRate": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "scoredRuns": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "required": [
+                  "outcome",
+                  "passRate",
+                  "scoredRuns"
+                ],
+                "additionalProperties": false
+              },
+              "revops": {
+                "type": "object",
+                "properties": {
+                  "outcome": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "passRate": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "scoredRuns": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "required": [
+                  "outcome",
+                  "passRate",
+                  "scoredRuns"
+                ],
+                "additionalProperties": false
+              },
+              "operations": {
+                "type": "object",
+                "properties": {
+                  "outcome": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "passRate": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "scoredRuns": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "required": [
+                  "outcome",
+                  "passRate",
+                  "scoredRuns"
+                ],
+                "additionalProperties": false
+              },
+              "finance": {
+                "type": "object",
+                "properties": {
+                  "outcome": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "passRate": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "scoredRuns": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "required": [
+                  "outcome",
+                  "passRate",
+                  "scoredRuns"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "failureRates": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "enum": [
+                "premature-finalization",
+                "required-call-omitted",
+                "required-call-misordered",
+                "retry-abandoned",
+                "required-write-missing",
+                "wrong-human-handoff"
+              ]
+            },
+            "additionalProperties": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "safety": {
+            "type": "object",
+            "properties": {
+              "unauthorizedActions": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "collateralChanges": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "missedEscalations": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "unnecessaryEscalations": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "unauthorizedActions",
+              "collateralChanges",
+              "missedEscalations",
+              "unnecessaryEscalations"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "modelId",
+          "slug",
+          "name",
+          "org",
+          "rank",
+          "corpBenchScore",
+          "outcomeScore",
+          "efficiencyScore",
+          "passRate",
+          "scheduledRuns",
+          "scoredRuns",
+          "passedRuns",
+          "successfulTasks",
+          "providerFailures",
+          "providerFailureRate",
+          "costPerTask",
+          "avgDurationSeconds",
+          "departmentScores",
+          "failureRates",
+          "safety"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "generatedAt",
+    "publishedAt",
+    "benchmarkVersion",
+    "pricingSnapshotAt",
+    "workflowCount",
+    "workflowDefinitionCount",
+    "repetitionsPerWorkflow",
+    "departmentCount",
+    "modelCount",
+    "methodologyHref",
+    "scoreWeights",
+    "departments",
+    "failureModes",
+    "models"
+  ],
+  "additionalProperties": false,
+  "$id": "https://raw.githubusercontent.com/RevensiAI/CorpBench/work-v1.3/schemas/report.schema.json"
+}

@@ -1,0 +1,725 @@
+{
+  "schemaVersion": 1,
+  "suite": {
+    "id": "corpbench-work",
+    "version": "1.3",
+    "scoreProfile": "work",
+    "stage": "launch",
+    "repetitionsPerWorkflow": 1,
+    "workflowCount": 100,
+    "departmentCount": 5,
+    "departments": {
+      "finance": 20,
+      "marketing": 20,
+      "operations": 20,
+      "revops": 20,
+      "sales": 20
+    }
+  },
+  "workflows": [
+    {
+      "id": "finance-001-month-end-close",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-001-month-end-close.json",
+      "sha256": "b8e7921673b5d46449b478754bf4636a542ff499246371790f184a3fd3df33cd"
+    },
+    {
+      "id": "finance-002-multi-entity-revenue-close",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-002-multi-entity-revenue-close.json",
+      "sha256": "af8084ea7694327c154cdc284efca7777d6afe36786cab6605eaa2ccccbf9abc"
+    },
+    {
+      "id": "finance-003-foreign-exchange-settlement",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-003-foreign-exchange-settlement.json",
+      "sha256": "94bfebd7c15a8dd53ebeda67d8c445d1cac1de03506ae6b444a634aa16d6ea6f"
+    },
+    {
+      "id": "finance-004-contract-usage-recognition",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-004-contract-usage-recognition.json",
+      "sha256": "b19a24e97e5f98b12c260c0907b7ba9703e582b5b282683c83c64ff85bf05ef7"
+    },
+    {
+      "id": "finance-005-intercompany-elimination",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-005-intercompany-elimination.json",
+      "sha256": "d2f897fccfbf4dec11b8245cbe206de4f0e97d87a1704c7812ceed3504dc3a96"
+    },
+    {
+      "id": "finance-006-chargeback-reserve-control",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-006-chargeback-reserve-control.json",
+      "sha256": "599ff07952d04e9256a988688b1c86b895524ecfa8e3f43c80cd7a12d83f2273"
+    },
+    {
+      "id": "finance-007-vendor-payment-sanctions",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-007-vendor-payment-sanctions.json",
+      "sha256": "261d1481219acec0e434e4fb7ac031189feda86882c9a8c0575faaf9e6780fab"
+    },
+    {
+      "id": "finance-008-subscription-refund-liability",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-008-subscription-refund-liability.json",
+      "sha256": "2d3ac46c544c5430a281f6d843d15bfbce5c46d5ee9d640b70ced6ea7bb3624a"
+    },
+    {
+      "id": "finance-009-tax-jurisdiction-evidence",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-009-tax-jurisdiction-evidence.json",
+      "sha256": "f0f6e77c7af9be4ed91ea7e6aed2823e49856f2d8c5047f44987107c8d103e07"
+    },
+    {
+      "id": "finance-010-deferred-revenue-waterfall",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-010-deferred-revenue-waterfall.json",
+      "sha256": "4f47705ddc94565322d914e0e51bfef2b38c501261011ac2ec23ce7a495e3b86"
+    },
+    {
+      "id": "finance-011-treasury-liquidity-transfer",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-011-treasury-liquidity-transfer.json",
+      "sha256": "90af446d6620ce64d855112d8a13199ad631ae61176cc331bc194ef9d4d07d7d"
+    },
+    {
+      "id": "finance-012-procurement-three-way-match",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-012-procurement-three-way-match.json",
+      "sha256": "6ea9c297900d63a3c9c38879910c9fc70bb54095684a5d8c7496bf3767a8dea5"
+    },
+    {
+      "id": "finance-013-payroll-variance-approval",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-013-payroll-variance-approval.json",
+      "sha256": "d3070df87bd1a7ddd32bbcecf15293bb50b3b98dfdf98458c724fc6bc3ccea1f"
+    },
+    {
+      "id": "finance-014-collections-credit-exception",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-014-collections-credit-exception.json",
+      "sha256": "b5f943e71d3cabea698ab5ffd8d707b361e56828aa5cd4c95d133f42440a5a8c"
+    },
+    {
+      "id": "finance-015-expense-policy-remediation",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-015-expense-policy-remediation.json",
+      "sha256": "2289dc989f32c0a25cd9f8abc899dc28625e2bd4425c89a2d138554c971a5d87"
+    },
+    {
+      "id": "finance-016-acquisition-opening-balance",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-016-acquisition-opening-balance.json",
+      "sha256": "99aa092263c42c23e837326a34dd6b0a488b88ed8261010406277f752258243d"
+    },
+    {
+      "id": "finance-017-bank-reconciliation-break",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-017-bank-reconciliation-break.json",
+      "sha256": "25dc664b19be8439894e5caf36046615787091ea830a06cbfe86a99de80abced"
+    },
+    {
+      "id": "finance-018-capitalization-policy-review",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-018-capitalization-policy-review.json",
+      "sha256": "b76d45f3dbe3fe510686f0d5218ee07db114240edaafb95db8409483166a8384"
+    },
+    {
+      "id": "finance-019-invoice-fraud-hold",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-019-invoice-fraud-hold.json",
+      "sha256": "e42a17298a1636836cc4ee1a47cb00069270e8c1b637d01932922335fb0ae8c5"
+    },
+    {
+      "id": "finance-020-audit-evidence-lock",
+      "version": 3,
+      "department": "finance",
+      "path": "workflows/finance/finance-020-audit-evidence-lock.json",
+      "sha256": "29c3d41a79c7fe6de6f1e44feee4dc5a732fff938b524fe20f122ca6708c1035"
+    },
+    {
+      "id": "marketing-001-regional-launch-control",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-001-regional-launch-control.json",
+      "sha256": "e0f876207643496bcef24bc3de57030fd2efad1311afb94f11285443be283ba9"
+    },
+    {
+      "id": "marketing-002-multi-region-budget-reallocation",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-002-multi-region-budget-reallocation.json",
+      "sha256": "24ece3d51d200bd581382bf55e627191122be8f3b70dfacae8874dcfb319c65c"
+    },
+    {
+      "id": "marketing-003-consent-segment-remediation",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-003-consent-segment-remediation.json",
+      "sha256": "e7fd426f88bced51463bcf3279d5e6e7105230a193a3b6d208e675e4df0dac11"
+    },
+    {
+      "id": "marketing-004-attribution-repair",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-004-attribution-repair.json",
+      "sha256": "ef9dcf8fa2a323b7f4812b360f52f7f9d3e653e55271c8cf1c9791e86cc13f64"
+    },
+    {
+      "id": "marketing-005-partner-campaign-approval",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-005-partner-campaign-approval.json",
+      "sha256": "eef45067237e4d84eb5793b1cc01991a7b3b615baa9bb7fbd9c7158103a74f4d"
+    },
+    {
+      "id": "marketing-006-webinar-lead-governance",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-006-webinar-lead-governance.json",
+      "sha256": "75e21491c83a05ccce5a8b215d34a8ef8fcd7004e98bf3d74e3efdbd7e091318"
+    },
+    {
+      "id": "marketing-007-paid-search-tracking-recovery",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-007-paid-search-tracking-recovery.json",
+      "sha256": "1650a1363a4f6e19b2fcc2256888106f97dadd48fb50b762fd61079259d5877e"
+    },
+    {
+      "id": "marketing-008-lifecycle-suppression-control",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-008-lifecycle-suppression-control.json",
+      "sha256": "2ecabc9d7b0b5985473d5c2d2fb2397e1b0b36f7eda72851d06500c417db3941"
+    },
+    {
+      "id": "marketing-009-localization-claims-review",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-009-localization-claims-review.json",
+      "sha256": "683b37d1175355e30e4db83e361e78dc4b6535e6b8d7f3134350f42d350db8d5"
+    },
+    {
+      "id": "marketing-010-content-expiry-rollout",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-010-content-expiry-rollout.json",
+      "sha256": "5f7b5871adf209952cf6f95d428cc8be13153bffd751f9a72a9f05743db1f095"
+    },
+    {
+      "id": "marketing-011-event-data-retention",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-011-event-data-retention.json",
+      "sha256": "1294670b10347ff9d7cfee5d837cbd5b93d4afd39c8dac266e3e7e2b018627e4"
+    },
+    {
+      "id": "marketing-012-agency-access-offboarding",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-012-agency-access-offboarding.json",
+      "sha256": "396051074ff7b511d8b370db9222042c3baa97af19f9b9b4917a1c5b6eda01e8"
+    },
+    {
+      "id": "marketing-013-experiment-guardrail",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-013-experiment-guardrail.json",
+      "sha256": "7d91770c287b8270a78ffbd56a142a2a96c9df9a03ba6d2ec3c97cfc6a22ff7b"
+    },
+    {
+      "id": "marketing-014-lead-scoring-drift",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-014-lead-scoring-drift.json",
+      "sha256": "708dcb709ae40f757ac2f0d89132f92610e898dd070fd0a1806147f76649cec4"
+    },
+    {
+      "id": "marketing-015-affiliate-fraud-control",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-015-affiliate-fraud-control.json",
+      "sha256": "05a0e57d5da65641ed0eecd83dc3e706a617885876eb6700d6da013c518e6d1c"
+    },
+    {
+      "id": "marketing-016-seo-migration-launch",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-016-seo-migration-launch.json",
+      "sha256": "80fca53812ae7a22b76710cb5a69600bf478d4667d01789beed6c59028e32e82"
+    },
+    {
+      "id": "marketing-017-product-announcement-embargo",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-017-product-announcement-embargo.json",
+      "sha256": "8068e3f434ef5fdc0f3cd7b3fda5faec4293535bdddfd3aaae825a38a01a74d0"
+    },
+    {
+      "id": "marketing-018-audience-overlap-remediation",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-018-audience-overlap-remediation.json",
+      "sha256": "5aa9fab5bb357eeb2c5abc3a24bd2afbcf8953cebe971860000318dce799d262"
+    },
+    {
+      "id": "marketing-019-marketing-spend-anomaly",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-019-marketing-spend-anomaly.json",
+      "sha256": "6b321c59b893916107b282638dab5bc70e6cba25c08a6d2632d5938f91ece9eb"
+    },
+    {
+      "id": "marketing-020-campaign-rollback-control",
+      "version": 3,
+      "department": "marketing",
+      "path": "workflows/marketing/marketing-020-campaign-rollback-control.json",
+      "sha256": "620b817d82c636c35db9286a25ada0dbed04740cbe8bd59af47879e1ea327299"
+    },
+    {
+      "id": "operations-001-constrained-fulfillment",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-001-constrained-fulfillment.json",
+      "sha256": "995488117b0043620e93eff3032bf329a9e47ed2af83b077a3ed118920ac95e7"
+    },
+    {
+      "id": "operations-002-carrier-disruption-reroute",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-002-carrier-disruption-reroute.json",
+      "sha256": "08e37d6f5187f67a1768ae75b3610f55fafa463e28991975c380acf1011e4ef9"
+    },
+    {
+      "id": "operations-003-return-fraud-review",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-003-return-fraud-review.json",
+      "sha256": "b1df807ebafe2717d8c950019ca11211ff89afcc9ea3b9240fae3428d41d964a"
+    },
+    {
+      "id": "operations-004-supplier-quality-quarantine",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-004-supplier-quality-quarantine.json",
+      "sha256": "bb58e24fc0aee2218c5d167aa3f7225ab942963b044e4a6c1a4b31b8a9dba657"
+    },
+    {
+      "id": "operations-005-cold-chain-exception",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-005-cold-chain-exception.json",
+      "sha256": "4f7d35142befde858cf1630f85287e4591995efad8d5b5b8b1365eb51ed2eba7"
+    },
+    {
+      "id": "operations-006-warehouse-transfer-reservation",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-006-warehouse-transfer-reservation.json",
+      "sha256": "f8650f88a360a0c62e34e80abf0d7ad4af9519dde39beae7ced58d4041ff698d"
+    },
+    {
+      "id": "operations-007-backorder-priority-allocation",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-007-backorder-priority-allocation.json",
+      "sha256": "57fab34af1cf11a9b1a5af062743cbec2bffe4dfa1a98b2e8e02b174e59cccb5"
+    },
+    {
+      "id": "operations-008-hazardous-goods-dispatch",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-008-hazardous-goods-dispatch.json",
+      "sha256": "6b324b698c37340fb115196fdf6c0c8b842dc4bfd1c5a8cc0d31a252f12a4d12"
+    },
+    {
+      "id": "operations-009-address-change-fraud-hold",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-009-address-change-fraud-hold.json",
+      "sha256": "ba90e53b50fcf82ff5434f4563eead66615cbf4540933081c50bc4f5dfcfce50"
+    },
+    {
+      "id": "operations-010-inventory-cycle-reconciliation",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-010-inventory-cycle-reconciliation.json",
+      "sha256": "ad824253b1c7a30aca07c624a8efed6d79aac511853ee7e0ec0e59f8c9176a3b"
+    },
+    {
+      "id": "operations-011-vendor-drop-ship-control",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-011-vendor-drop-ship-control.json",
+      "sha256": "12ed2ae4c4269a25d39c7730a22fbeaebeb037af533c543b94a70e6300e2a9b9"
+    },
+    {
+      "id": "operations-012-recall-order-containment",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-012-recall-order-containment.json",
+      "sha256": "b7d494e1da65b95b0ff436a127dcf3d63b7358eeb578c0c9868ce72c05962992"
+    },
+    {
+      "id": "operations-013-customs-document-remediation",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-013-customs-document-remediation.json",
+      "sha256": "6ada539bf283ae41f25d949782f01d94c38ff6f445a6e7386b23b0fc182892c1"
+    },
+    {
+      "id": "operations-014-service-parts-allocation",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-014-service-parts-allocation.json",
+      "sha256": "b00c8a5185a37c6a635e5db47bbbb4b2b2eda46fb3d41111687f429945cced2d"
+    },
+    {
+      "id": "operations-015-marketplace-oversell-control",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-015-marketplace-oversell-control.json",
+      "sha256": "75403b4977f666e6833a2c8cbe08fce43fbc15c1db0449eb782fd7eb67587d28"
+    },
+    {
+      "id": "operations-016-replacement-order-idempotency",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-016-replacement-order-idempotency.json",
+      "sha256": "027d173f0e626d7ca43be3945ed97ba235fdb7a85d4003ab0d563b6d4e9dbec5"
+    },
+    {
+      "id": "operations-017-delivery-sla-recovery",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-017-delivery-sla-recovery.json",
+      "sha256": "5e1030228abeec24041ee2d42fd4b2c01e35a5196d1569b705e3a5d35f16272b"
+    },
+    {
+      "id": "operations-018-procurement-shortage-escalation",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-018-procurement-shortage-escalation.json",
+      "sha256": "dbd49cafb0683d0b7af4dd362af3fde88844c6e8ed6f6c28485ec19ba047805b"
+    },
+    {
+      "id": "operations-019-lot-expiry-allocation",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-019-lot-expiry-allocation.json",
+      "sha256": "b0c5f6c7569aa18f76386a1547cf8d52272afae36987dc0578b40760d654dcb2"
+    },
+    {
+      "id": "operations-020-peak-capacity-throttling",
+      "version": 3,
+      "department": "operations",
+      "path": "workflows/operations/operations-020-peak-capacity-throttling.json",
+      "sha256": "a07cc1f7ded0ab2c386ec86ef871f37bc1c752fa9d6596574daaaba17242fa40"
+    },
+    {
+      "id": "revops-001-cross-system-routing",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-001-cross-system-routing.json",
+      "sha256": "8770649f7a25b18969382d4a31cf034bc65b1d8145a8f1ff8e66d8f718f9dcf2"
+    },
+    {
+      "id": "revops-002-account-hierarchy-migration",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-002-account-hierarchy-migration.json",
+      "sha256": "d5fd649c8ba90eec3871769b193f5c56e0eb4d71af6b3800ab59d4a1542728d6"
+    },
+    {
+      "id": "revops-003-forecast-repair",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-003-forecast-repair.json",
+      "sha256": "47557b1fcd331fa2ae26fb5ac808a32b6c3d1fc55e08aad0b92a9bed105dcf11"
+    },
+    {
+      "id": "revops-004-territory-conflict-routing",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-004-territory-conflict-routing.json",
+      "sha256": "295081d98076cf6f15e589b790af3ce3a6d16d5a9072d854ea4f5abef2c9dfaf"
+    },
+    {
+      "id": "revops-005-renewal-ownership-handoff",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-005-renewal-ownership-handoff.json",
+      "sha256": "5e595651497ed4d8663f0b011d2fc7101e9387c7acbe57fa8e9366005ddadf14"
+    },
+    {
+      "id": "revops-006-billing-crm-reconciliation",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-006-billing-crm-reconciliation.json",
+      "sha256": "8ea4f4e3a1620ef76aa8b0de94e8b0389b6253011cd1eacb5917333477341d86"
+    },
+    {
+      "id": "revops-007-partner-attribution-dispute",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-007-partner-attribution-dispute.json",
+      "sha256": "a97096f7314f4545d8a3628dbc56096faf2a868242351d440979492bfee57e65"
+    },
+    {
+      "id": "revops-008-contact-consent-deduplication",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-008-contact-consent-deduplication.json",
+      "sha256": "fbebae31c36fd0a699b3b835b5d5419465568d2541d08d415081d69ce37b4f4a"
+    },
+    {
+      "id": "revops-009-opportunity-stage-remediation",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-009-opportunity-stage-remediation.json",
+      "sha256": "99df0fb7c8ac1e0340d83f27eef83cae4a67ae91c2801bf9414c8131e1e0d867"
+    },
+    {
+      "id": "revops-010-product-led-lead-routing",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-010-product-led-lead-routing.json",
+      "sha256": "fa7a93a056068e086dbbe17fe7bbd93de473780fa37c6773e4b9f8c3f7440577"
+    },
+    {
+      "id": "revops-011-customer-lifecycle-sync",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-011-customer-lifecycle-sync.json",
+      "sha256": "c0a91dfc486478705043d248121fe24a1099e63700036ff6df16d185f2afce98"
+    },
+    {
+      "id": "revops-012-quota-credit-allocation",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-012-quota-credit-allocation.json",
+      "sha256": "98cf8bb7382512d3111141cf5a763df651264e9a73809d81e939336232565485"
+    },
+    {
+      "id": "revops-013-account-merge-contract-guard",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-013-account-merge-contract-guard.json",
+      "sha256": "9ec563ce952bf97da90b85117f3388fc13f5cb4276ddb01bb2bed8a0675f0791"
+    },
+    {
+      "id": "revops-014-churn-risk-handoff",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-014-churn-risk-handoff.json",
+      "sha256": "82b1833c7dc555a058925205b5dde9e4f7aaf47b3838816d8cb85c77b510bd33"
+    },
+    {
+      "id": "revops-015-lead-source-integrity",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-015-lead-source-integrity.json",
+      "sha256": "ab720abeb4db9790dc66ad9dc6f8dbaad9629aa82826d583d0fe27c9ab4cfcbd"
+    },
+    {
+      "id": "revops-016-pipeline-currency-normalization",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-016-pipeline-currency-normalization.json",
+      "sha256": "186de611141f4bbc1bf3122b3a01545b8d2b37714fe32556a93fd9ef2920c3ed"
+    },
+    {
+      "id": "revops-017-sandbox-production-reconciliation",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-017-sandbox-production-reconciliation.json",
+      "sha256": "77a7e187e6a5297408d80aeb02a003e1d2b569e258b006f8588cafad01a0949f"
+    },
+    {
+      "id": "revops-018-enrichment-staleness-control",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-018-enrichment-staleness-control.json",
+      "sha256": "7b05c6bac7b9d83cd54abea9c438c545864c7b5c8bca13973caefe6444e28edf"
+    },
+    {
+      "id": "revops-019-duplicate-opportunity-resolution",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-019-duplicate-opportunity-resolution.json",
+      "sha256": "c548491018b4216d00955dcfbb4ab861bc9abe694e4a8f1bd42dd3c7234067a0"
+    },
+    {
+      "id": "revops-020-data-retention-deletion-hold",
+      "version": 3,
+      "department": "revops",
+      "path": "workflows/revops/revops-020-data-retention-deletion-hold.json",
+      "sha256": "11b2a54a52332ebdb35c7f8177ae829af45442b2023048f43c5211eb5b00f528"
+    },
+    {
+      "id": "sales-001-enterprise-quote-approval",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-001-enterprise-quote-approval.json",
+      "sha256": "a275e833922109dcf6f5a7a13fe4f0cf2c0f44ad2286584c2cc933a26b57d92b"
+    },
+    {
+      "id": "sales-002-renewal-redline-control",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-002-renewal-redline-control.json",
+      "sha256": "c13bfd339d8e7ef7bb402048aa64c686503aee1032076f39faf01394a390f531"
+    },
+    {
+      "id": "sales-003-multi-year-discount-approval",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-003-multi-year-discount-approval.json",
+      "sha256": "d382fd4e9ee97666731421020021c25cfd4214ff869cfa79b3297d5c886cfa2e"
+    },
+    {
+      "id": "sales-004-partner-resale-quote",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-004-partner-resale-quote.json",
+      "sha256": "7bcf9055a1542c91a0ecd37c27939183152a1f59e4bb43b8e1f07fb60416f610"
+    },
+    {
+      "id": "sales-005-usage-expansion-proposal",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-005-usage-expansion-proposal.json",
+      "sha256": "6119648b5b842e632dd231c4d422f3b13176091cbe70c91b357752d0db79e76d"
+    },
+    {
+      "id": "sales-006-public-sector-compliance",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-006-public-sector-compliance.json",
+      "sha256": "759d7587d22a27770772e99ed0dfb4a420249a4655a6c4f3f4cd6c384df7a86d"
+    },
+    {
+      "id": "sales-007-healthcare-data-addendum",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-007-healthcare-data-addendum.json",
+      "sha256": "59de0a6462b62664f66380c7ca051ef378970e169aaac305cb82450524041022"
+    },
+    {
+      "id": "sales-008-competitive-replacement-credit",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-008-competitive-replacement-credit.json",
+      "sha256": "f63e1734ee25fa6d1c97cd5cfa6d9d0826aaa302e57de851a53dad6e11fbcddc"
+    },
+    {
+      "id": "sales-009-channel-conflict-resolution",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-009-channel-conflict-resolution.json",
+      "sha256": "36ea1336ea8e5281702e1dd8260722b0cf12e6fff1d473ad3d1d8cbd135343b4"
+    },
+    {
+      "id": "sales-010-proof-of-concept-conversion",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-010-proof-of-concept-conversion.json",
+      "sha256": "f2938c7365eb3db5c1e773370100a94f08bccb35dd73ce2d843123afc4d8cf76"
+    },
+    {
+      "id": "sales-011-procurement-security-handoff",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-011-procurement-security-handoff.json",
+      "sha256": "902063f939aaaed36371dbea717e034b9e1b5562560beef817061fd00c3f67f3"
+    },
+    {
+      "id": "sales-012-international-entity-quote",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-012-international-entity-quote.json",
+      "sha256": "ae2db29061b18e14dc63bd5f51e12477e902f8d81df40cf68206accc11ad1412"
+    },
+    {
+      "id": "sales-013-ramp-deal-revenue-review",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-013-ramp-deal-revenue-review.json",
+      "sha256": "435bf433dffcbae11fe83267460d899146c065e18ad4cc18497bda18f1c588eb"
+    },
+    {
+      "id": "sales-014-customer-credit-risk",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-014-customer-credit-risk.json",
+      "sha256": "29e5f5204856dae7b75858faae27c2c59d604e42b84b7332ccefb950d7229a72"
+    },
+    {
+      "id": "sales-015-co-term-expansion-control",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-015-co-term-expansion-control.json",
+      "sha256": "84228fbeffcf480186f81753ab5d1b6740dc1549042a3619d5b1e260be9c3e4c"
+    },
+    {
+      "id": "sales-016-legal-term-exception",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-016-legal-term-exception.json",
+      "sha256": "4bb20ce6add19db7c323e996610752dabd96ef815ee854e492d6053a118ab8e2"
+    },
+    {
+      "id": "sales-017-product-availability-commitment",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-017-product-availability-commitment.json",
+      "sha256": "9a281d0e12eba09f0d4e195c554a49e9aed2bf2b4420bf34dd415cc4a20186eb"
+    },
+    {
+      "id": "sales-018-executive-sponsorship-handoff",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-018-executive-sponsorship-handoff.json",
+      "sha256": "572499b756f7d57cecd02d56d6740ef7544f015a1d53d7dec857c070239f81d2"
+    },
+    {
+      "id": "sales-019-stale-quote-revalidation",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-019-stale-quote-revalidation.json",
+      "sha256": "04914dfa6b61e55ae991ba2c53012bee5656e811a8063722c80ad9ad5192f15b"
+    },
+    {
+      "id": "sales-020-closed-won-order-handoff",
+      "version": 3,
+      "department": "sales",
+      "path": "workflows/sales/sales-020-closed-won-order-handoff.json",
+      "sha256": "7aad84756f82a67d3c33bd0327213e2ce0f56a799057ead9b766a56cce135924"
+    }
+  ],
+  "results": {
+    "path": "../../../results/work/1.3/report.json",
+    "sha256": "8611e168cbe7b635a8bc1842ce4501e397422919d2c0523ed5e2aa5d90d626ea"
+  }
+}
