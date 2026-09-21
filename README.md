@@ -2,10 +2,13 @@
 
 [![Validate public data](https://github.com/RevensiAI/CorpBench/actions/workflows/validate.yml/badge.svg)](https://github.com/RevensiAI/CorpBench/actions/workflows/validate.yml)
 [![Apache-2.0 license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![Hugging Face dataset](https://img.shields.io/badge/Hugging%20Face-dataset-yellow.svg)](https://huggingface.co/datasets/revensi/CorpBench)
 
 CorpBench Work is a public library of **100 deterministic business workflows** for evaluating AI agents across Finance, Marketing, Operations, RevOps, and Sales. It describes the work agents were asked to perform, the simulated systems and tool contracts they could use, and the grading mode applied to each workflow.
 
 Explore the [live CorpBench benchmark](https://revensi.com/corpbench) for the interactive leaderboard, findings, cost and speed comparisons, department results, failure modes, reliability, and methodology.
+
+Load the viewer-ready [CorpBench dataset on Hugging Face](https://huggingface.co/datasets/revensi/CorpBench), with separate `workflows` and `results` configurations.
 
 ## Work 1.3 library
 
